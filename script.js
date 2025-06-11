@@ -1,23 +1,57 @@
-let choice;
+let computerChoice = document.querySelector(".computer-choice");
+let playerChoice = document.querySelector(".player-choice");
+let rockButton = document.querySelector("#rock-button");
+let paperButton = document.querySelector("#paper-button");
+let scissorsButton = document.querySelector("#scissors-button");
+let gameResult = document.querySelector(".game-result");
+
+let pc;
+let gr;
 
 function getComputerChoice(){
-   choice = Math.floor(Math.random()*3);
+   computerChoice = Math.floor(Math.random()*3);
+
 };
 
 getComputerChoice()
-console.log(choice);
+console.log(computerChoice);
 
-if (choice === 0)
+if (computerChoice === 0)
  {
     console.log("Rock");
+    computerChoice = "Rock";
 }
 
-if (choice === 1)
+if (computerChoice === 1)
 {
     console.log("Paper");
+    computerChoice = "Paper";
 }
 
-if (choice === 2)
+if (computerChoice === 2)
 {
-    console.log("Scissors")
+    console.log("Scissors");
+    computerChoice = "Scissors";
+}
+
+rockButton.addEventListener("click", function(){
+    pc = "Rock";
+    playerChoice.innerHTML = pc;
+    checkResult();
+});
+
+paperButton.addEventListener("click", function(){
+    pc = "Paper";
+    playerChoice.innerHTML = pc;
+     checkResult();
+});
+
+scissorsButton.addEventListener("click", function(){
+    pc = "Scissors";
+    playerChoice.innerHTML = pc;
+    checkResult();
+});
+
+function checkResult(){
+    
 }

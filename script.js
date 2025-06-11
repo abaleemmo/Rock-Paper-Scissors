@@ -7,6 +7,7 @@ let gameResult = document.querySelector(".game-result");
 
 let pc;
 let gr;
+let cc;
 
 function getComputerChoice(){
    computerChoice = Math.floor(Math.random()*3);
@@ -19,19 +20,19 @@ console.log(computerChoice);
 if (computerChoice === 0)
  {
     console.log("Rock");
-    computerChoice = "Rock";
+    cc = "Rock";
 }
 
 if (computerChoice === 1)
 {
     console.log("Paper");
-    computerChoice = "Paper";
+    cc = "Paper";
 }
 
 if (computerChoice === 2)
 {
     console.log("Scissors");
-    computerChoice = "Scissors";
+    cc = "Scissors";
 }
 
 rockButton.addEventListener("click", function(){
@@ -53,5 +54,31 @@ scissorsButton.addEventListener("click", function(){
 });
 
 function checkResult(){
-    
+    if (pc = cc) {
+        gr = "Draw";
+        gameResult.innerHTML = gr;
+    }
+
+    if (pc = "Rock") {
+        if (computerChoice = "Scissors"){
+            gr = "Win";
+            gameResult.innerHTML = gr;
+        }
+    }
+
+    if (pc = "Paper") {
+        if (computerChoice = "Rock"){
+            gr = "Win";
+            gameResult.innerHTML = gr;
+        }
+    }
+
+    if (pc = "Scissors") {
+        if (computerChoice = "Paper"){
+            gr = "Win";
+            gameResult.innerHTML = gr;
+        }
+    }
+    console.log(gr);
 }
+
